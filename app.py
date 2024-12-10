@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import regex as re
 
 # Set page configuration
-st.set_page_config(page_title="Health Assistant",
+st.set_page_config(page_title="DiagnoSense",
                    layout="wide",
                    page_icon="🧑‍⚕️")
 
@@ -26,7 +26,7 @@ parkinsons_model = pickle.load(open("E:\DiagnoSense\Saved Models\parkinson_disea
 
 # sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('DiagnoSense',
 
                            ['Diabetes Prediction',
                             'Heart Disease Prediction',
@@ -38,7 +38,7 @@ with st.sidebar:
 
 # Diabetes Prediction Page
 if selected == 'Diabetes Prediction':
-    st.header('Diabetes Prediction using ML')
+    st.header('Diabetes Prediction')
     # Input fields for diabetes prediction
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -120,7 +120,7 @@ if selected == 'Diabetes Prediction':
 if selected == 'Heart Disease Prediction':
 
     # page title
-    st.title('Heart Disease Prediction using ML')
+    st.title('Heart Disease Prediction')
 
     col1, col2, col3 = st.columns(3)
 
@@ -243,7 +243,7 @@ if selected == 'Heart Disease Prediction':
 if selected == "Parkinsons Prediction":
 
     # page title
-    st.title("Parkinson's Disease Prediction using ML")
+    st.title("Parkinson's Disease Prediction")
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
